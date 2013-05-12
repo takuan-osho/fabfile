@@ -30,3 +30,4 @@ def setup_deb():
         deb.setup_devtools()
 
         python.setup_package_manager()
+        python.install_useful_packages()
