@@ -4,17 +4,16 @@ from fabric.api import local
 from fabric.api import task
 from fabric.api import cd
 
-import fabtools
 from fabtools.vagrant import vagrant
 
 from cuisine import package_update
 from cuisine import package_upgrade
-from cuisine import python_package_upgrade
 
 from . import deb
 from . import nginx
 from . import python
 from . import nodejs
+from . import oracle_jdk
 
 package_update = task(package_update)
 package_upgrade = task(package_upgrade)
