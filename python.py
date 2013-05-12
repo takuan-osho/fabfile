@@ -14,7 +14,7 @@ def setup_package_manager():
 
 
 @task
-def useful_packages():
+def install_useful_packages():
     pkg_list = '''
         Sphinx mercurial virtualenv virtualenvwrapper pytest nose
         monitoring see
