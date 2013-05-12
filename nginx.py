@@ -4,7 +4,4 @@ from fabric.api import task
 
 from fabtools import require
 
-
-@task
-def server():
-    require.nginx.server()
+server = task(require.nginx.server)
