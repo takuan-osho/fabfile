@@ -31,3 +31,4 @@ def setup_deb():
 
         python.setup_package_manager()
         python.install_useful_packages()
+    local('vagrant sandbox on')
