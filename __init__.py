@@ -31,4 +31,7 @@ def setup_deb():
 
         python.setup_package_manager()
         python.install_useful_packages()
+
+        nodejs.installed_from_source()
+
     local('vagrant sandbox on')
