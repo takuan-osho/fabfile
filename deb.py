@@ -13,6 +13,6 @@ def setup_devtools():
     packages = '''
         ssh curl wget vim git tmux build-essential libsqlite3-dev
         libreadline6-dev libgdbm-dev zlib1g-dev libbz2-dev sqlite3
-        tk-dev zip tree
+        tk-dev zip tree jenkins
     '''.split()
     require.deb.packages(packages, update=True)
