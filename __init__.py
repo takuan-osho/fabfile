@@ -10,6 +10,7 @@ from cuisine import package_update
 from cuisine import package_upgrade
 
 from . import deb
+from . import rpm
 from . import myconfig
 from . import python
 from . import nodejs
@@ -31,6 +32,23 @@ def setup_deb():
         package_upgrade()
 
         deb.setup_devtools()
+
+        myconfig.setup_dotfiles()
+
+        python.setup_package_manager()
+        python.install_useful_packages()
+
+        nodejs.installed_from_source()
+
+    local('vagrant sandbox on')
+
+
+@task
+def setup_rpm():
+    local('vagrant up')
+    with vagrant_settings():
+
+        rpm.setup_devtools()
 
         myconfig.setup_dotfiles()
 
