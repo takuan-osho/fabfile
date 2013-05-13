@@ -15,10 +15,15 @@ def setup_package_manager():
 
 @task
 def install_useful_packages():
-    pkg_list = '''
+    pip_pkg_list = '''
         Sphinx mercurial virtualenv virtualenvwrapper pytest nose
-        monitoring see
+        monitoring see ipython bpython
     '''.split()
-    pkg_list = [pkg for pkg in pkg_list if not python.is_installed(pkg)]
-    if pkg_list:
-        python_distribute.install(pkg_list, use_sudo=True)
+    require.python.packages(pip_pkg_list, use_sudo=True)
+
+    distribute_pkg_list = '''
+    '''.split()
+    distribute_pkg_list = [pkg for pkg in distribute_pkg_list
+                           if not python.is_installed(pkg)]
+    if distribute_pkg_list:
+        python_distribute.install(distribute_pkg_list, use_sudo=True)
