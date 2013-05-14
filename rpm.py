@@ -12,7 +12,7 @@ upgrade = task(fabtools.rpm.upgrade)
 @task
 def setup_devtools():
     """
-    Install basic tools for developpers.
+    Install basic tools for developers.
     """
     packages = '''
         build_essentioal ssh curl wget vim git tmux zip tree mysql

@@ -8,7 +8,7 @@ from fabtools import require
 @task
 def setup_devtools():
     """
-    Install basic tools for developpers.
+    Install basic tools for developers.
     """
     packages = '''
         ssh curl wget vim git tmux build-essential libsqlite3-dev
