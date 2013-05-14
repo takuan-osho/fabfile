@@ -7,8 +7,6 @@ from fabric.api import cd
 from fabtools import files
 from fabtools.require import git
 
-import cuisine
-
 
 def install_dotfiles():
     git.working_copy('https://github.com/takuan-osho/dotfiles.git',
