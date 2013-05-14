@@ -3,6 +3,7 @@
 from fabric.api import task
 from fabric.api import local
 
+from fabtools.vagrant import vagrant
 from fabtools.vagrant import vagrant_settings
 
 from . import deb
