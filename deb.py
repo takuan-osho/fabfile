@@ -2,8 +2,11 @@
 
 from fabric.api import task
 
+import fabtools
 from fabtools import require
 
+update_index = task(fabtools.deb.update_index)
+upgrade = task(fabtools.deb.upgrade)
 
 @task
 def setup_devtools():
